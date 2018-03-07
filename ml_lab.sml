@@ -2,12 +2,30 @@
 *
 * CSCI 305 - ML Programming Lab
 *
-* <firstname> <lastname>
-* <email-address>
+* John Bemis
+* bidinc.33@gmail.com
 *
 ***************************************************************)
 
 (* Define your data type and functions here *)
+(*
+ * fun f [] = []
+ *  | f (x::xs) = (x + 1) :: (f xs)
+ * This function takes every value of a list that is passed in
+ * and adds one to every value.
+ *)
+
+datatype 'data set =
+  Empty | Set of 'element * 'element set;
+
+fun isMember(e,set) = false
+  | isMember(e, set(x,y)) =
+    if e = x then true
+    else if y = not(Empty) then isMember(e, y)
+    else false
+    end if;
+
+fun list2Set []
 
 (* Simple function to stringify the contents of a Set of characters *)
 fun stringifyCharSet Empty = ""

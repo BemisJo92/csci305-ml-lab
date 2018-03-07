@@ -3,13 +3,19 @@ CSCI 305
 Spring 2018
 Lab Questions
 =======================
-1.
+1. val it = [4,2,5,2,6,10]
 
-2.
+2. This function takes every number in a set and adds one to it.
 
-3.
+3. I'm going to assume that since nothing follows *b* that this
+question and the preceding question are asking about the lines that
+come before the two comments, rather than after. The line that comes
+before *a* defines a function f that takes in a list [] and returns
+a list [].
 
-4.
+4. The line preceding *b* says that for every element in the list
+that is passed into f should have 1 added to it and then returned
+to the list.
 
 5.
 
