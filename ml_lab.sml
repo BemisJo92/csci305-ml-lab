@@ -18,12 +18,10 @@
 datatype 'data set =
   Empty | Set of 'element * 'element set;
 
-fun isMember(e,set) = false
-  | isMember(e, set(x,y)) =
-    if e = x then true
-    else if y = not(Empty) then isMember(e, y)
-    else false
-    end if;
+fun isMember (e, Set(element, otherSet)) =
+  if e = element then true
+  else if otherSet = Empty then false
+  else isMember(e, otherSet);
 
 fun list2Set []
 

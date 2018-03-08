@@ -1,4 +1,4 @@
-<firstname> <lastname>
+John Bemis
 CSCI 305
 Spring 2018
 Lab Questions
@@ -10,20 +10,33 @@ Lab Questions
 3. I'm going to assume that since nothing follows *b* that this
 question and the preceding question are asking about the lines that
 come before the two comments, rather than after. The line that comes
-before *a* defines a function f that takes in a list [] and returns
-a list [].
+before *a* defines a function f that takes in a list [] and, should
+that list be empty, return an empty list [].
 
-4. The line preceding *b* says that for every element in the list
-that is passed into f should have 1 added to it and then returned
-to the list.
+4. The line preceding *b* says that if the first definition of f
+does not apply to the list, a new definition is created that says
+that the list should be split into two parts, the first element of
+the list (the head), and every other element in the list (the tail)
+for every element in the list that is passed into f, it should
+have 1 added to it and then returned to the list. f is then called
+recursively with the remaining values in the list.
 
-5.
+5. For this input I get an error saying "Operator and operand don't
+agree [tycon mismatch]" and this is because what is passed in is a
+list, where isMember is checking for sets.
 
-6.
+6. My method creates a set using tail recursion because it checks
+if e is in the set as the function goes deeper in the set. If the
+method were to reach the base case and then check if e were in the
+set on the way back out of the deepest part of the set, then it would
+be head recursion. 
 
 7.
 
-8.
+8. Tail recursion allows for implementation that is similar in
+efficiency as a goto statement, which allows for efficient structured
+programming. Using tail recursion uses about as much memory as an
+equivalent loop.
 
 9.
 
