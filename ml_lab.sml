@@ -8,12 +8,11 @@
 ***************************************************************)
 
 (* Define your data type and functions here *)
-(*
- * fun f [] = []
- *  | f (x::xs) = (x + 1) :: (f xs)
- * This function takes every value of a list that is passed in
- * and adds one to every value.
- *)
+
+(* This function takes every value of a list that is passed in
+and adds one to every value. *)
+ fun f [] = []
+   | f (x::xs) = (x + 1) :: (f xs)
 
 (*Datatype that defines either Empty, or a set with one element
   and another set*)
