@@ -3,6 +3,13 @@ CSCI 305
 Spring 2018
 Lab Questions
 =======================
+***NOTE***
+Some of the functions did not work well, possibly because I am
+using Windows. I have rewritten the questions so that they test
+the same thing, but run on my machine. I have placed these and
+a copy of my code in test.sml, for easy running.
+***NOTE***
+
 1. val it = [4,2,5,2,6,10]
 
 2. This function takes every number in a set and adds one to it.
@@ -25,29 +32,67 @@ recursively with the remaining values in the list.
 agree [tycon mismatch]" and this is because what is passed in is a
 list, where isMember is checking for sets.
 
+  online: isMember "one" ["1", "2", "3", "4"]
+  ml_lab.sml: isMember("one", (list2Set["1","2","3","4","5"]));
+
+I noticed that online the question is different than the one put in
+the code, so I ran the question that was put into ml_lab.sml as well
+and received false as an output.
+
 6. My method creates a set using tail recursion because it checks
 if e is in the set as the function goes deeper in the set. If the
 method were to reach the base case and then check if e were in the
 set on the way back out of the deepest part of the set, then it would
-be head recursion. 
+be head recursion.
 
-7.
+7. Although the output screen does not show it for some reason, the
+output is
+val it = Set("it",Set("was",Set("the",Set("best", Set("of", Set("times,", Set("it", Set("was", Set("the", Set("worst", Set("of", Set("times",Empty))))))))))));
+What I mean by the output does not show it, is the actual output
+shows
+val it = Set("it",Set("was",Set #)) and I think it does this because
+SML does not allow for the ouptut of a return variable that is longer
+than a certain set of characters. The way I know that it is correct
+because I set a variable to the method call and then compared the
+variable to what I know the output should be and it returned true.
 
 8. Tail recursion allows for implementation that is similar in
 efficiency as a goto statement, which allows for efficient structured
 programming. Using tail recursion uses about as much memory as an
 equivalent loop.
 
-9.
+9. For this call, I couldn't get the program to run the method exactly
+as you have it written. It reads the first list2Set and performs
+the method, but it doesn't read the second one for some reason.
+To fix this I put the output of both the list2Sets into two variables
+and ran union(x,y), x and y being the variables I used. Again, the
+interpreter does not print out the entire return, so to ensure
+that the output I was getting was what was expected, I set the expected
+to a variable and I set the method call to a variable. Then compared
+them. What I get is
+val it = Set("green", Set("eggs", Set("and", Set("ham", Empty)))
 
-10.
+10. Executing this method in the same manner as the previous
+question, I get the return value
+val it = Set("and", Set("macaroni", Empty))
 
-11.
+11. I liked how easy it was to break up lists and alter the head
+and the tail. I also liked how reliant ML is on recursion because
+I think recursion is interesting and challenging.
 
-12.
+12. I disliked how poor the error messages were sometimes. They
+were unhelpful when trying to solve some issues, and sometimes
+didn't even provide a line number.
 
-13.
+13. This lab was very interesting, and I think I liked it. It
+was very challenging but also rewarding. I didn't like how some of
+the questions were written out at the bottom of ml_lab.sml because they
+didn't work with the version of ML I'm using due to ML's
+weird syntax rules for Windows. I typed in the questions in a test
+document that runs fine, but hopefully they will work for the
+questions listed at the bottom of the main file.
 
-14.
+14. I worked for about 10 hours on this lab, possibly 11.
 
-15.
+15. I don't think I will use ML ever again, I did not enjoy using
+it that much although it was interesting to learn.
